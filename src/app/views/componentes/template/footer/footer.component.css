@@ -1,0 +1,22 @@
+.footer {
+    height: 7%;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1 {
+    border: 1px solid rgb (97, 96, 96);
+    padding: .4rem 15%;
+    border-radius: 5px;
+}
+
+.p {
+    color: rgb(141, 139, 139);
+    margin: 0;
+    font-size: 1rem;
+    border-radius: 1px solid rgb(58, 57, 57);
+    padding: 0 8%;
+    border-radius: 20px;
+}
