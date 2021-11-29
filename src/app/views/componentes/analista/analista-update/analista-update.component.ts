@@ -1,33 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Tecnico } from 'src/app/models/tecnico';
-import { TecnicoService } from 'src/app/services/tecnico.service';
+import { analista } from 'src/app/models/analista';
+import { analistaService } from 'src/app/services/analista.service';
 
 @Component({
-  selector: 'app-tecnico-update',
-  templateUrl: './tecnico-update.component.html',
-  styleUrls: ['./tecnico-update.component.css']
+  selector: 'app-analista-update',
+  templateUrl: './analista-update.component.html',
+  styleUrls: ['./analista-update.component.css']
 })
-export class TecnicoUpdateComponent implements OnInit {
+export class AnalistaUpdateComponent implements OnInit {
 
   id_tec = ''
 
-  tecnico: Tecnico = 
+  analista: analista = 
   {
     id: '',
     nome: '',
     cpf: '',
-    telefone: ''
+    telefone: '',
+    salario: 0
 }
 
 nome = new FormControl('', [Validators.minLength(4)])
 cpf = new FormControl('', [Validators.minLength(11)])
 telefone = new FormControl('', [Validators.minLength(11)])
+salario = new FormControl('', [Validators.minLength(3)])
 
   
 
-  constructor(private service : TecnicoService,
+  constructor(private service : analistaService,
     private router : Router,
     private route: ActivatedRoute) { }
 
@@ -38,18 +40,18 @@ telefone = new FormControl('', [Validators.minLength(11)])
 
   findById():void {
     this.service.findById(this.id_tec).subscribe((resposta) => {
-      this.tecnico = resposta;
+      this.analista = resposta;
     })
   }
 
   cancel():void{
-    this.router.navigate(['tecnicos'])
+    this.router.navigate(['analistas'])
   }
 
   update():void {
-    this.service.update(this.tecnico).subscribe((resposta) => {
-      this.router.navigate(['tecnicos'])
-      this.service.message('Técnico atualizado com sucesso!')
+    this.service.update(this.analista).subscribe((resposta) => {
+      this.router.navigate(['analistas'])
+      this.service.message('Analista atualizado com sucesso!')
     })
   }
 

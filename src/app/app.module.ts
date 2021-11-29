@@ -24,10 +24,10 @@ import { HeaderComponent } from './views/componentes/template/header/header.comp
 import { FooterComponent } from './views/componentes/template/footer/footer.component';
 import { NavComponent } from './views/componentes/template/nav/nav.component';
 import { HomeComponent } from './views/componentes/home/home.component';
-import { TecnicoReadComponent } from './views/componentes/tecnico/tecnico-read/tecnico-read.component';
-import { TecnicoCreateComponent } from './views/componentes/tecnico/tecnico-create/tecnico-create.component';
-import { TecnicoUpdateComponent } from './views/componentes/tecnico/tecnico-update/tecnico-update.component';
-import { TecnicoDeleteComponent } from './views/componentes/tecnico/tecnico-delete/tecnico-delete.component';
+import { AnalistaReadComponent } from './views/componentes/analista/analista-read/analista-read.component';
+import { AnalistaCreateComponent } from './views/componentes/analista/analista-create/analista-create.component';
+import { AnalistaUpdateComponent } from './views/componentes/analista/analista-update/analista-update.component';
+import { AnalistaDeleteComponent } from './views/componentes/analista/analista-delete/analista-delete.component';
 
 @NgModule({
   declarations: [
@@ -36,10 +36,10 @@ import { TecnicoDeleteComponent } from './views/componentes/tecnico/tecnico-dele
     FooterComponent,
     NavComponent,
     HomeComponent,
-    TecnicoReadComponent,
-    TecnicoCreateComponent,
-    TecnicoUpdateComponent,
-    TecnicoDeleteComponent
+    AnalistaReadComponent,
+    AnalistaCreateComponent,
+    AnalistaUpdateComponent,
+    AnalistaDeleteComponent
   ],
   imports: [
     BrowserModule,

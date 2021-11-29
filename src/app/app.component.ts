@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  title = 'os';
+  title = 'Reflect IT System';
 }

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/componentes/home/home.component';
-import { TecnicoCreateComponent } from './views/componentes/tecnico/tecnico-create/tecnico-create.component';
-import { TecnicoDeleteComponent } from './views/componentes/tecnico/tecnico-delete/tecnico-delete.component';
-import { TecnicoReadComponent } from './views/componentes/tecnico/tecnico-read/tecnico-read.component';
-import { TecnicoUpdateComponent } from './views/componentes/tecnico/tecnico-update/tecnico-update.component';
+import { AnalistaCreateComponent } from './views/componentes/analista/analista-create/analista-create.component';
+import { AnalistaDeleteComponent } from './views/componentes/analista/analista-delete/analista-delete.component';
+import { AnalistaReadComponent } from './views/componentes/analista/analista-read/analista-read.component';
+import { AnalistaUpdateComponent } from './views/componentes/analista/analista-update/analista-update.component';
 
 const routes: Routes = [
   {
@@ -12,20 +12,20 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'tecnicos',
-    component: TecnicoReadComponent
+    path: 'analistas',
+    component: AnalistaReadComponent
   },
   {
-    path: 'tecnicos/create',
-    component: TecnicoCreateComponent
+    path: 'analistas/create',
+    component: AnalistaCreateComponent
   },
   {
-    path: 'tecnicos/update/:id',
-    component: TecnicoUpdateComponent
+    path: 'analistas/update/:id',
+    component: AnalistaUpdateComponent
   },
   {
-    path: 'tecnicos/delete/:id',
-    component: TecnicoDeleteComponent
+    path: 'analistas/delete/:id',
+    component: AnalistaDeleteComponent
   }
 ];
 

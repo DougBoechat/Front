@@ -1,42 +1,44 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Tecnico } from 'src/app/models/tecnico';
-import { TecnicoService } from 'src/app/services/tecnico.service';
+import { analista } from 'src/app/models/analista';
+import { analistaService } from 'src/app/services/analista.service';
 
 @Component({
-  selector: 'app-tecnico-create',
-  templateUrl: './tecnico-create.component.html',
-  styleUrls: ['./tecnico-create.component.css']
+  selector: 'app-analista-create',
+  templateUrl: './analista-create.component.html',
+  styleUrls: ['./analista-create.component.css']
 })
-export class TecnicoCreateComponent implements OnInit {
+export class AnalistaCreateComponent implements OnInit {
 
-  tecnico: Tecnico = {
+  analista: analista = {
       id: '',
       nome: '',
       cpf: '',
-      telefone: ''
+      telefone: '', 
+      salario: 0
   }
 
   nome = new FormControl('', [Validators.minLength(4)])
   cpf = new FormControl('', [Validators.minLength(11)])
   telefone = new FormControl('', [Validators.minLength(11)])
+  salario = new FormControl('', [Validators.minLength(3)])
 
   constructor(
-    private service : TecnicoService,
+    private service : analistaService,
     private router : Router) { }
 
   ngOnInit(): void {
   }
 
   cancel():void{
-    this.router.navigate(['tecnicos'])
+    this.router.navigate(['analistas'])
   }
 
   create():void {
-    this.service.create(this.tecnico).subscribe((resposta) => {
-      this.router.navigate(['tecnicos'])
-      this.service.message('Técnico criado com sucesso!')
+    this.service.create(this.analista).subscribe((resposta) => {
+      this.router.navigate(['analistas'])
+      this.service.message('Analista criado com sucesso!')
     })
   }
 
