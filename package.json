@@ -3,30 +3,33 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
+        "start": "node server.js",
         "build": "ng build",
-        "watch": "ng build --watch --configuration development"
+        "watch": "ng build --watch --configuration development",
+        "heroku-postbuild": "ng build --prod"
     },
     "private": true,
     "dependencies": {
+        "@angular-devkit/build-angular": "~12.2.4",
         "@angular/animations": "~12.2.0",
         "@angular/cdk": "^12.2.4",
+        "@angular/cli": "~12.2.4",
         "@angular/common": "~12.2.0",
         "@angular/compiler": "~12.2.0",
+        "@angular/compiler-cli": "~12.2.0",
         "@angular/core": "~12.2.0",
         "@angular/forms": "~12.2.0",
         "@angular/material": "^12.2.4",
         "@angular/platform-browser": "~12.2.0",
         "@angular/platform-browser-dynamic": "~12.2.0",
         "@angular/router": "~12.2.0",
+        "@types/node": "^12.11.1",
+        "express": "^4.17.1",
+        "path": "^0.12.7",
         "rxjs": "~6.6.0",
         "tslib": "^2.3.0",
-        "zone.js": "~0.11.4",
-        "@angular-devkit/build-angular": "~12.2.4",
-        "@angular/cli": "~12.2.4",
-        "@angular/compiler-cli": "~12.2.0",
-        "@types/node": "^12.11.1",
-        "typescript": "~4.3.5"
+        "typescript": "~4.3.5",
+        "zone.js": "~0.11.4"
     },
     "devDependencies": {
         "@angular-devkit/build-angular": "~12.2.4",
@@ -34,5 +37,9 @@
         "@angular/compiler-cli": "~12.2.0",
         "@types/node": "^12.11.1",
         "typescript": "~4.3.5"
+    },
+    "engines": {
+        "node": "16.13.0",
+        "npm": "8.1.0"
     }
 }
