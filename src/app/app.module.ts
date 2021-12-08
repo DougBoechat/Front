@@ -28,6 +28,8 @@ import { AnalistaReadComponent } from './views/componentes/analista/analista-rea
 import { AnalistaCreateComponent } from './views/componentes/analista/analista-create/analista-create.component';
 import { AnalistaUpdateComponent } from './views/componentes/analista/analista-update/analista-update.component';
 import { AnalistaDeleteComponent } from './views/componentes/analista/analista-delete/analista-delete.component';
+import { PagamentoCreateComponent } from './views/componentes/pagamento/pagamento-create/pagamento-create.component';
+import { PagamentoReadComponent } from './views/componentes/pagamento/pagamento-read/pagamento-read.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { AnalistaDeleteComponent } from './views/componentes/analista/analista-d
     AnalistaReadComponent,
     AnalistaCreateComponent,
     AnalistaUpdateComponent,
-    AnalistaDeleteComponent
+    AnalistaDeleteComponent,
+    PagamentoCreateComponent,
+    PagamentoReadComponent
   ],
   imports: [
     BrowserModule,

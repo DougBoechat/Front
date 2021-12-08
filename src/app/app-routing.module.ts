@@ -5,6 +5,7 @@ import { AnalistaCreateComponent } from './views/componentes/analista/analista-c
 import { AnalistaDeleteComponent } from './views/componentes/analista/analista-delete/analista-delete.component';
 import { AnalistaReadComponent } from './views/componentes/analista/analista-read/analista-read.component';
 import { AnalistaUpdateComponent } from './views/componentes/analista/analista-update/analista-update.component';
+import {PagamentoReadComponent} from './views/componentes/pagamento/pagamento-read/pagamento-read.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'analistas/delete/:id',
     component: AnalistaDeleteComponent
+  },
+  {
+    path: 'pagamentos',
+    component: PagamentoReadComponent
   }
 ];
 
